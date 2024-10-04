@@ -1,8 +1,6 @@
 //comsc-210 | lab 16 Color Class W/Constructors | Robert Stonemetz
 
 
-//comsc 210 | lab 14 | Robert Stonemetz
-
 #include <iostream>
 #include <iomanip>
 using namespace std;
@@ -14,9 +12,27 @@ private:
     int blue;
 
 public:
-    // Constructors
+    // Default Constructors
     Color() : red(0), green(0), blue(0) {}
+
+    //paramater constructor
     Color(int r, int g, int b) : red(r), green(g), blue(b) {}
+
+    //Partial Constructor for red
+
+    Color (int r, int g, int b) : red(r), green(0), blue(0) {}
+
+    //partial constructor for red and green
+
+    Color (int r, int g,int b) : red(r), green (g), blue (0) {}
+
+    //partial constructor for green and blue
+
+    Color (int r, int g,int b) : red(0), green (g), blue (b) {}
+
+
+
+    
 
     // Setters
     void setRed(int r) { red = r; }

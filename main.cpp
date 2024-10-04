@@ -25,7 +25,7 @@ public:
     Color (int r, int g) : red(r), green (g), blue (0) {}
 
     //partial constructor for green and blue
-    Color (int g,int b) : red(0), green (g), blue (b) {}
+    //Color (int g,int b) : red(0), green (g), blue (b) {}
 
 
     // Setters
@@ -55,28 +55,19 @@ int main() {
     Color color2 (255, 0, 0);
 
     //using partial Constructor for red only
-    Color color3 (0);
+    Color color3 (128);
 
     //using partial for red and green
     Color color4 (0, 255);
 
-    //using partial for green and blue
-
-    Color color5 (128, 128);
-
-
-
-    //Color color1(255, 0, 0);
-    //Color color2(0, 255, 0);
-    //Color color3(0, 0,255);
-    //Color color4;
+      
 
     //using setter method
 
-    Color color6; 
-        color6.setRed(128);
-        color6.setGreen(128);
-        color6.setBlue(128);
+    Color color5; 
+        color5.setRed(128);
+        color5.setGreen(128);
+        color5.setBlue(128);
 
     
     cout << "Color 1 (Default): ";
@@ -87,20 +78,16 @@ int main() {
     color2.print();
     cout << endl;
 
-    cout << "Color 3 (red Only): ";
+    cout << "Color 3 (Red Only): ";
     color3.print();
     cout << endl;
 
-    cout << "Color 4(Red and Green): ";
+    cout << "Color 4 (Red and Green): ";
     color4.print();
     cout << endl;
 
-    cout << "Color 5 (green and blue): ";
+    cout << "Color 5 (Setters): ";
     color5.print();
-    cout << endl;
-
-    cout << "Color 6 (Setters): ";
-    color6.print();
     cout << endl;
 
     // Demonstrate use of getters
@@ -120,13 +107,10 @@ int main() {
          << ", Green: " << color4.getGreen() 
          << ", Blue: " << color4.getBlue() << endl;
 
-    cout << "Color 5 components - red: " << color5.getRed() 
-         << ", Green: " << color5.getGreen() 
-         << ", Blue: " << color5.getBlue() << endl;
-
-    cout << "Color 6 components - red: " << color6.getRed() 
-         << ", Green: " << color6.getGreen() 
-         << ", Blue: " << color6.getBlue() << endl;
+    cout << "Color 5 components - red: " << color5.getRed()
+        << ", Green: " << color5.getGreen()
+        << ", Blue: " << color5.getBlue() << endl;
+    
    
     return 0;
 }

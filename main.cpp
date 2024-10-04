@@ -19,20 +19,14 @@ public:
     Color(int r, int g, int b) : red(r), green(g), blue(b) {}
 
     //Partial Constructor for red
-
     Color (int r, int g, int b) : red(r), green(0), blue(0) {}
 
     //partial constructor for red and green
-
     Color (int r, int g,int b) : red(r), green (g), blue (0) {}
 
     //partial constructor for green and blue
-
     Color (int r, int g,int b) : red(0), green (g), blue (b) {}
 
-
-
-    
 
     // Setters
     void setRed(int r) { red = r; }
@@ -54,29 +48,51 @@ public:
 
 int main() {
 
-    Color color1(255, 0, 0);
-    Color color2(0, 255, 0);
-    Color color3(0, 0,255);
-    Color color4;
+    //using the default constructor
+    Color color1;
 
-    color4.setRed(128);
-    color4.setGreen(128);
-    color4.setBlue(128);
+    //using the parameter constructor
+    Color color2 (255, 0, 0);
 
-    cout << "Color 1: ";
+    //using partial Constructor for red only
+    Color color3 (0);
+
+    //using partial for red and green
+    Color color4 (0, 255);
+
+
+
+    //Color color1(255, 0, 0);
+    //Color color2(0, 255, 0);
+    //Color color3(0, 0,255);
+    //Color color4;
+
+    //using setter method
+
+    Color color5; 
+        color5.setRed(128);
+        color5.setGreen(128);
+        color5.setBlue(128);
+
+    
+    cout << "Color 1 (Default): ";
     color1.print();
     cout << endl;
 
-    cout << "Color 2: ";
+    cout << "Color 2 (Full Parameters): ";
     color2.print();
     cout << endl;
 
-    cout << "Color 3: ";
+    cout << "Color 3 (red Only): ";
     color3.print();
     cout << endl;
 
-    cout << "Color 4: ";
+    cout << "Color 4(Red and Green): ";
     color4.print();
+    cout << endl;
+
+    cout << "Color 5 (setters): ";
+    color5.print();
     cout << endl;
 
     // Demonstrate use of getters
@@ -88,13 +104,11 @@ int main() {
          << ", Green: " << color2.getGreen() 
          << ", Blue: " << color2.getBlue() << endl;
 
-          cout << "Color 3 components - Green: " << color3.getRed() 
+          cout << "Color 3 components - blue: " << color3.getRed() 
          << ", Green: " << color3.getGreen() 
          << ", Blue: " << color3.getBlue() << endl;
 
-          cout << "Color 2 components - Green: " << color4.getRed() 
-         << ", Green: " << color4.getGreen() 
-         << ", Blue: " << color4.getBlue() << endl;
+         
    
     return 0;
 }
